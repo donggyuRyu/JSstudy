@@ -14,5 +14,5 @@
 ## 일정
 ### week1. 
 * 날짜: 2021.05.17 ~ 2021.05.23 <br/>
-* 범위: ~[2.6 alert, prompt, confirm을 이용한 상호작용](https://ko.javascript.info/alert-prompt-confirm)
+* 범위: [2.1 Hello, world!](https://ko.javascript.info/hello-world)~[2.6 alert, prompt, confirm을 이용한 상호작용](https://ko.javascript.info/alert-prompt-confirm)
 
