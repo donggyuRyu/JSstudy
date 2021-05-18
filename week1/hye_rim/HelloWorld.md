@@ -22,8 +22,8 @@
 
 
 <hr>
-참고한 블로그
-* https://mommoo.tistory.com/82
-* https://ko.pentegroup.com/686-how-to-copy-file-or-folder-path-from-finder-on-mac-three-ways-explained
+참고한 블로그 <br>
+- https://mommoo.tistory.com/82<br>
+- https://ko.pentegroup.com/686-how-to-copy-file-or-folder-path-from-finder-on-mac-three-ways-explained
 
 
