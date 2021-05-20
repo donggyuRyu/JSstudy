@@ -1,4 +1,4 @@
-# 2.3 [변수와 상수](https://ko.javascript.info/variables)
+# [2.3 변수와 상수](https://ko.javascript.info/variables)
 
 ## 변수
 **`var`**
@@ -70,7 +70,7 @@ let userName; // 해답은 currentUserName
 ```
 
 3. 대문자 상수 올바로 사용하기
-```
+```javascript
 const BIRTHDAY = '18.04.1982'; // 페이지 로드 전 정해진 상수이므로 대문자가 적절
 
 const age = someCode(BIRTHDAY); // 페이지 로드 후 함수에 인자를 할당하므로 일반적인 변수명이 적절
