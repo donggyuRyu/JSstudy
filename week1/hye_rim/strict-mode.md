@@ -1,4 +1,4 @@
-# [엄격모드](https://ko.javascript.info/strict-mode)
+# [2.3엄격모드](https://ko.javascript.info/strict-mode)
 자바스크립트 파일 최 상단에 `"use strict"` 입력. 
 이렇게 했을 때 ES5에서 추가된 기능을 사용할 수 있다로 이해 했다.
 
