@@ -1,4 +1,4 @@
-# [2.3 변수와 상수](https://ko.javascript.info/variables)
+# [2.4 변수와 상수](https://ko.javascript.info/variables)
 
 ## 변수
 **`var`**
