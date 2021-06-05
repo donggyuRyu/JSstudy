@@ -133,9 +133,22 @@ function showCancel() {
 // ask의 인수 showOk, showCancel은 콜백함수다.
 ask("동의하십니까?", showOk, showCancel);
 ```
-* 익명함수(anonymous function): 이름 없이 선언한 함수
+> 익명함수(anonymous function): 이름 없이 선언한 함수
 ```javascript
 function() { alert("동의하셨습니다.");
 ```
 
 # [2.17 화살표 함수 기본](https://ko.javascript.info/arrow-functions-basics)
+> let func = (arg1, arg2, ...argN) => expression
+
+* `retrun`지시자를 사용해 명시적으로 결과값을 반환해 주어야 한다. 
+* (내가 기억하기론 class내에서 this를 사용할 때도 굉장히 유용하다고 안다)
+# 과제
+### 화살표 함수로 변경하기
+```javascript
+ask(
+  "동의하십니까?",
+  () => alert("동의하셨습니다.");,
+  () => alert("취소 버튼을 누르셨습니다.");
+);
+```
