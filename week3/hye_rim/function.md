@@ -92,4 +92,50 @@ function pow(x, n) {
 ```
 
 # [2.16 함수 표현식](https://ko.javascript.info/function-expressions)
+## 함수 선언 방법
+### 함수 선언문
+```javascript
+function sayHi() {
+  alert( "Hello" );
+}
+```
+* `함수이름()`: 함수 반환 값 나옴  
+* `함수이름`만 : 함수 식 자체
+* 호이스팅 됨. 즉 선언문이 정의 되기 전 호출 가능해 스크립티 어디에 있던 사용 가능함
+### 함수 표현식
+* 호이스팅 안됨. 실행 흐름이 함수에 도달했을 때 해당 함수 사용
+```javascript
+let sayHi = function() {
+  alert( "Hello" );
+};
+```
+
+## 콜백 함수
+* 매개변수(parameter) : 함수에서 전달된 값을 받는 변수
+* 인수(argument): 전달되는 값
+* 콜백함수: 인수로 전달한 함수를 나중에 호출(called back)
+```javascript
+// 여기서 매개변수는 question, yes, no
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+function showOk() {
+  alert( "동의하셨습니다." );
+}
+
+function showCancel() {
+  alert( "취소 버튼을 누르셨습니다." );
+}
+
+// 여기서 "동의하십니까?", showOk, showCancel은 인수
+// ask의 인수 showOk, showCancel은 콜백함수다.
+ask("동의하십니까?", showOk, showCancel);
+```
+* 익명함수(anonymous function): 이름 없이 선언한 함수
+```javascript
+function() { alert("동의하셨습니다.");
+```
+
 # [2.17 화살표 함수 기본](https://ko.javascript.info/arrow-functions-basics)
