@@ -113,7 +113,43 @@ let user = makeUser();
 
 alert( user.ref.name ); // 답: 에러 발생
 ```
-아예 이해 안감...
+
+💡 알았다.
+```javascript
+// 콘솔에 찍히게 하는 방법1. 
+function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+};
+
+let user = makeUser();
+
+console.log( user.ref )
+// Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+// 엄격 모드가 아닐 때 this는 전역 객체를 참조한다. 
+// 그럼 브라우저 환경에선 window 라는 전역 객체를 참조한다. 
+```
+```javascript
+// 콘솔에 찍히게 하는 방법2.
+function makeUser() {
+  return {
+    name: "John",
+    ref() {
+        return this;
+    }
+  }
+}
+
+
+let user = makeUser();
+
+console.log( user.ref().name )
+// John
+// 메서드 내부에서 this 키워드를 이용해 객체에 접근할 수 있다. 
+```
+
 ### 계산기 만들기
 ```javascript
 let calculator = {
