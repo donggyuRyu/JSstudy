@@ -32,7 +32,7 @@
 
 ### week5. 
 * 날짜: 2021.06.14 ~ 2021.06.20 <br/>
-* 범위: [4.4 메서드와 this](https://ko.javascript.info/object-methods)~[4.6 옵셔널 체이닝 '?.'](https://ko.javascript.info/optional-chaining), [5.4 배열](https://ko.javascript.info/optional-chaining)~[5.5 배열과 메서드](https://ko.javascript.info/optional-chaining), 백준 [1차원 배열](https://www.acmicpc.net/step/6)
+* 범위: [4.4 메서드와 this](https://ko.javascript.info/object-methods)~[4.6 옵셔널 체이닝](https://ko.javascript.info/optional-chaining),  [5.4 배열](https://ko.javascript.info/optional-chaining)~[5.5 배열과 메서드](https://ko.javascript.info/optional-chaining), 백준 [1차원 배열](https://www.acmicpc.net/step/6)
 
 
 ### week6. 
