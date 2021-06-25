@@ -47,6 +47,39 @@ alert( 'Interface'[3].toLowerCase() );
 ```
 toUpperCase()나 toLowerCase()는 문자열 중간에 있는것도 바꿀 수있다.
 
+```
+let str = 'Widget with id';
 
+alert( str.indexOf('id', 2) ) // 12
+```
+indexOf('a',2)를 통해 a가 2번째로 나오는 위치가 어딘지 찍을 수 있다.
 
+```
+let str = "Widget with id";
 
+if (str.indexOf("Widget") != -1) {
+    alert("찾았다!"); 
+}
+```
+다음 코드를 Not 비트연산자 ~이용하여 
+
+```
+let str = "Widget";
+
+if (~str.indexOf("Widget")) {
+  alert( '찾았다!' );
+}
+```
+로 고칠수 있다. 그러나 코드의 직관성을 위해 잘 사용하지 않는편이다.
+
+```
+alert( "Widget with id".includes("Widget") ); // true
+
+alert( "Hello".includes("Bye") ); // false
+```
+str.includes() 함수를 이용해 해당 문자열이 있는지 true false여부만 알수 있다.
+
+```
+alert( "Widget".includes("id", 3) );
+```
+includee()에 두번째 인수에는 해당 위치부터 id를 검색하도록 명령할수 있다 3번째부터 "id"가 없으면 false를 반환한다.
