@@ -83,3 +83,45 @@ str.includes() 함수를 이용해 해당 문자열이 있는지 true false여�
 alert( "Widget".includes("id", 3) );
 ```
 includee()에 두번째 인수에는 해당 위치부터 id를 검색하도록 명령할수 있다 3번째부터 "id"가 없으면 false를 반환한다.
+
+```
+let str = "stringify";
+alert( str.slice(0, 5) ); // 'strin'
+alert( str.slice(0, 1) ); // 's'
+```
+slice(start, end) 함수를 이용해 start부터 end미만까지의 자리수를 추출할 수 있다.
+
+```
+let str = "stringify";
+
+// 동일한 부분 문자열을 반환합니다.
+alert( str.substring(2, 6) ); // "ring"
+alert( str.substring(6, 2) ); // "ring"
+```
+
+substring(start, end)함수도 slice와 비슷하지만 start가 end보다 커도 된다는 차이점이 있다.
+
+```
+let str = "stringify";
+alert( str.substr(2, 4) ); // ring,
+```
+
+substr(start, length) 함수는 start위치부터 length만큼 추출한다. start가 음수면 뒤에서부터 개수를 샌다.
+
+```
+alert( "z".codePointAt(0) ); // 122
+```
+codePointAt(pos) pos에 위치한 글자의 코드를 반환한다.
+
+```
+alert( String.fromCodePoint(90) ); // Z
+```
+
+String.fromCodePoint(code) code에 대응하는 글자를 만들어 준다.
+
+```
+alert( '\u005a' ); // Z
+```
+
+\u뒤에 16진수 콛드를 붙여서 원하는 코드를 출력할 수도 있다.
+
