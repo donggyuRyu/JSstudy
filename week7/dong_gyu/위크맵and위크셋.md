@@ -30,4 +30,48 @@ function countUser(user) {
   visitsCountMap.set(user, count + 1);
 }
 ```
-사용자 방문횟수를 저장하며 한유저가 방문하고 다음에 방문에서 그 유저의 참조값이 null로 바뀌면 자동으로 삭제된다.
+사용자 방문횟수를 저장하며 한유저가 방문하고 다음에 방문에서 그 유저의 참조값이 null로 바뀌면 자동으로 삭제된다.<br>
+
+```
+let cache = new WeakMap();
+
+// 연산을 수행하고 그 결과를 위크맵에 저장합니다.
+function process(obj) {
+  if (!cache.has(obj)) {
+    let result = /* 연산 수행 */ obj;
+
+    cache.set(obj, result);
+  }
+
+  return cache.get(obj);
+}
+
+
+let obj = {/* ... 객체 ... */};
+
+let result1 = process(obj);
+let result2 = process(obj);
+
+obj = null;
+```
+weakMap은 캐싱을 할때도 유용하게 사용할 수 있다.<br>
+let cache = new Map();으로 객체를 형성마지막에obj에 null이 참조되어도 메모리가 지워지지않는다.<br>
+<h1>Object.keys, values, entries</h1>
+Object.*로 객체를 호출하면 iterable객체가 아닌 배열을 반환한다.<br>
+Object.keys, values, entries는 for..in 반복문처럼, 키가 심볼형인 프로퍼티를 무시한다.<br>
+심볼형 키만 배열형태로 반환해주는 Object.getOwnPropertySymbols를 사용하거나 Reflect.ownKeys(obj)를 사용해야 한다.<br>
+객체에는 map,filter같은 배열전용 메서드를 사용할수 없으나, Object.eentries와 Objeect.fromEntries를 순차적으로 적용하면 사용 가능하다.<br>
+```
+let prices = {
+  banana: 1,
+  orange: 2,
+  meat: 4,
+};
+
+let doublePrices = Object.fromEntries(
+  Object.entries(prices).map(([key, value]) => [key, value * 2])
+);
+
+alert(doublePrices.meat);
+```
+위와 같이 객체를 배열로 변환해서 map을 이용해 객체의 값을 바꿀수 있다.
