@@ -18,3 +18,51 @@ let doublePrices = Object.fromEntries(
 
 alert(doublePrices.meat); // 8
 ```
+
+## 과제
+### 프로퍼티 값 더하기
+```javascript
+// 방법1
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+}
+
+function sumSalaries(salaries) {
+    let sum = 0
+    for(salary of Object.values(salaries)){
+        sum += salary
+    }
+    return sum
+}
+alert( sumSalaries(salaries) ); // 650
+```
+```javascript
+// 방법2
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+function sumSalaries(salaries) {
+  return Object.values(salaries).reduce((a, b) => a + b, 0) // 650
+}
+
+alert( sumSalaries(salaries) ); // 650
+```
+
+### 프로퍼티 개수 세기
+```javascript
+let user = {
+  name: 'John',
+  age: 30
+};
+
+function count(obj){
+    return Object.keys(obj).length
+}
+
+alert( count(user) ); // 2
+```
