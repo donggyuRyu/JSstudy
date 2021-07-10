@@ -45,3 +45,24 @@ Date()객체는 자동고침이 있어서 범위를 벗어나는 값을 설정�
 let date = new Date(2013, 0, 32); // 2013년 1월 32일은 없습니다.
 alert(date); // 2013년 2월 1일이 출력됩니다.
 ```
+윤년또한 Date객체가 알아서 처리해준다.<br>
+```
+let date = new Date(2016, 1, 28);
+date.setDate(date.getDate() + 2);
+
+alert( date ); // 2016년 3월 1일
+```
+Date.now()메서드를 이용해 코드를 실행하는데 걸린 시간을 계산할 수있다.<br>
+```
+let start = Date.now(); // 1970년 1월 1일부터 현재까지의 밀리초
+
+// 원하는 작업을 수행
+for (let i = 0; i < 100000; i++) {
+  let doSomething = i * i * i;
+}
+
+let end = Date.now(); // done
+
+alert( `반복문을 모두 도는데 ${end - start} 밀리초가 걸렸습니다.` );
+```
+performance.now()메서드는 페이지로딩이 걸린 시간을 밀리초로 반환해준다.
