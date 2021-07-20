@@ -1,5 +1,6 @@
 <li>JSON.stringify – 객체를 JSON으로 바꿔줍니다.</li>
 <li>JSON.parse – JSON을 객체로 바꿔줍니다.</li>
+
 ```
 let student = {
   name: 'John',
